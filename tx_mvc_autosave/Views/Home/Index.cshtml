@@ -1,0 +1,37 @@
+﻿@using TXTextControl.Web
+@using TXTextControl.Web.MVC
+
+@{
+    ViewBag.Title = "TX Text Control Autosave sample";
+}
+
+<div class="info">Document has been restored!</div>
+
+@Html.TXTextControl().TextControl(settings => 
+    settings.Dock = DockStyle.Window).Render()
+
+<script>
+
+    TXTextControl.addEventListener("ribbonTabsLoaded", function (e) {
+        restoreDocument();
+        var intervalAutoSave = setInterval(autoSaveDocument, 5000);
+    });
+
+    function autoSaveDocument() {
+        TXTextControl.saveDocument(TXTextControl.streamType.InternalUnicodeFormat, function (e) {
+            localStorage.document = e.data;
+        });
+    }
+
+    function restoreDocument() {
+
+        if (localStorage["document"]) {
+            TXTextControl.loadDocument(
+                TXTextControl.streamType.InternalUnicodeFormat,
+                localStorage.document);
+
+            $(".info").css("display", "inline-block");
+        }
+    }
+
+</script>

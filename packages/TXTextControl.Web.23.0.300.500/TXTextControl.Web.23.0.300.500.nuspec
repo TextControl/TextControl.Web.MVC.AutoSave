@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>TXTextControl.Web</id>
+    <version>23.0.300.500</version>
+    <title>TXTextControl.Web NuGet Package</title>
+    <authors>Text Control GmbH</authors>
+    <owners>Text Control GmbH</owners>
+    <licenseUrl>http://www.textcontrol.com/downloads/license/nuget_license.txt</licenseUrl>
+    <projectUrl>http://www.textcontrol.com/en_US/support/documentation/getting-started/html5-mvc/</projectUrl>
+    <iconUrl>http://www.textcontrol.com/img/nuget/tx_13_nuget.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This NuGet package includes the required files to create an ASP.NET MVC web application with support for the HTML5 based rich text editor of TX Text Control .NET Server for ASP.NET. Give your users an MS Word compatible document editor to create powerful reporting templates anywhere - in any HTML5-based browser including Google Chrome, Firefox, Safari and Internet Explorer. The trial version of TX Text Control .NET Server for ASP.NET is required to use this NuGet package.</description>
+    <summary>The HTML5 based rich text editor of TX Text Control .NET Server for ASP.NET MVC.</summary>
+    <copyright>Copyright Text Control GmbH</copyright>
+    <language>en-US</language>
+    <tags>HTML5 rich text editor ASP.NET MVC reporting mail merge</tags>
+    <dependencies>
+      <group targetFramework=".NETFramework4.5">
+        <dependency id="HtmlAgilityPack" version="1.4.9" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>
